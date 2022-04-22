@@ -1,0 +1,25 @@
+{
+  "name": "data_correction",
+  "version": "1.0.0",
+  "description": "Kata de correction de données",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "Guillaume Gruyer",
+  "license": "ISC",
+  "dependencies": {
+    "https": "^1.0.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "mocha": "^9.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gkub3/katas_eXaltIT_data_correction.git"
+  }
+}
