@@ -1,7 +1,10 @@
 //Chargement des dépendances
-const { getUserData, FILE_RESULT } = require('../solution'),
-      assert = require('assert').strict,
-      result = require('./results.json')
+import { strict as assert } from 'assert'
+import { readFile } from 'fs/promises'
+
+import getUserData from '../index.js'
+
+const result = JSON.parse(await readFile(new URL('./results.json', import.meta.url)));
 
 describe("Test de comparaison de la récupération de données avec le résultat attendu", function() {
   
@@ -14,7 +17,7 @@ describe("Test de comparaison de la récupération de données avec le résultat
 
   it("Le fichier fabriqué par la fonction doit contenir les mêmes données que le fichier de résultat", async function() {
       await getUserData(true)
-      data = require(FILE_RESULT)
+      const data = JSON.parse(await readFile(new URL('../data/data.json', import.meta.url)));
       for (const id in result){
         assert.deepStrictEqual(result[id], data[id])
       } 
