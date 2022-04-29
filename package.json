@@ -1,15 +1,18 @@
 {
   "name": "data_correction",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Kata de correction de données",
-  "main": "solution.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha"
   },
   "keywords": [],
   "author": "Guillaume Gruyer",
   "license": "ISC",
   "dependencies": {
+    "es-main": "^1.0.2",
     "https": "^1.0.0",
     "path": "^0.12.7",
     "url": "^0.11.0"
